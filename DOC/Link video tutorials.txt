@@ -1,0 +1,8 @@
+- JWT by QuangPH4: 
+https://web.microsoftstream.com/video/62e97fc3-bb18-4299-8e13-c86f8d1c2eb7?list=studio
+
+- Introduced Docker by PhamQuangVu:
++) Part 1: 
+https://web.microsoftstream.com/video/58dcb56c-9662-4d40-8210-3a3e5304f58b?list=studio
++) Part 2 + Interview Questions: 
+https://web.microsoftstream.com/video/d5501d2f-b9f5-4b47-b4af-9200f0a18019?list=studio

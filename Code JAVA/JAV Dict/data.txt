@@ -1,0 +1,6 @@
+Eimi Fukuda;16;1.60;48
+Maria Ozawa;32;1.59;50
+Yua Mikami;24;1.61;51
+Saori Hara;18;1.58;47
+Nozomi Sasaki;22;1.71;55
+Rola Misaki;23;1.55;51
