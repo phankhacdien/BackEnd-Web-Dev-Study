@@ -1,8 +1,8 @@
 public class Book extends Document {
-    private int page_number;
+    protected int number_page;
 
-    Book(int doc_barcode, String introducer, int release_number, int page_number) {
+    Book(String doc_barcode, String introducer, int release_number, int page_qty) {
         super(doc_barcode, introducer, release_number);
-        this.page_number = page_number;
+        this.number_page = page_qty;
     }
 }
