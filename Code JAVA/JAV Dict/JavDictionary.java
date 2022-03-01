@@ -5,9 +5,9 @@ import java.text.Format;
 
 class JavDictionary
 {
-    public static void main(String[] arg)
+    public static void main(String[] arg) throws IOException
     {
-        try
+//        try
         {
             Scanner scanner = new Scanner(System.in);
             Path path = Path.of("data.txt");
@@ -47,7 +47,7 @@ class JavDictionary
                 System.out.println("-----------------------------------\n");
             }
         }
-        catch(IOException e){}
+//        catch(IOException e){}
         
     }
 };
