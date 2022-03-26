@@ -6,17 +6,20 @@ public class Student implements ShowInfo{
     private String fullName;
     private LocalDate doB;
     private String sex;
-    private int phone;
+    private String phone;
     private String university;
     private String gradeLevel;
 
-    public Student(String fullName, LocalDate doB, String sex, int phone, String university, String gradeLevel) {
+    public Student(String fullName, LocalDate doB, String sex, String phone, String university, String gradeLevel) {
         this.fullName = fullName;
         this.doB = doB;
         this.sex = sex;
         this.phone = phone;
         this.university = university;
         this.gradeLevel = gradeLevel;
+    }
+
+    public Student() {
     }
 
     @Override
@@ -48,7 +51,7 @@ public class Student implements ShowInfo{
         this.sex = sex;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
@@ -72,7 +75,7 @@ public class Student implements ShowInfo{
         return sex;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 

@@ -4,12 +4,15 @@ import java.time.LocalDate;
 
 public class NormalStudent extends Student{
     private int englishScore;
-    private int entryTestScore;
+    private float entryTestScore;
 
-    public NormalStudent(String fullName, LocalDate doB, String sex, int phone, String university, String gradeLevel, int englishScore, int entryTestScore) {
+    public NormalStudent(String fullName, LocalDate doB, String sex, String phone, String university, String gradeLevel, int englishScore, float entryTestScore) {
         super(fullName, doB, sex, phone, university, gradeLevel);
         this.englishScore = englishScore;
         this.entryTestScore = entryTestScore;
+    }
+
+    public NormalStudent() {
     }
 
     @Override
@@ -24,7 +27,7 @@ public class NormalStudent extends Student{
         this.englishScore = englishScore;
     }
 
-    public void setEntryTestScore(int entryTestScore) {
+    public void setEntryTestScore(float entryTestScore) {
         this.entryTestScore = entryTestScore;
     }
 
@@ -32,7 +35,7 @@ public class NormalStudent extends Student{
         return englishScore;
     }
 
-    public int getEntryTestScore() {
+    public float getEntryTestScore() {
         return entryTestScore;
     }
 }

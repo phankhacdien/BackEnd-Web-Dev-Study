@@ -1,7 +1,6 @@
 package Exercise13.Entity;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Certificate {
     private String certificateName;

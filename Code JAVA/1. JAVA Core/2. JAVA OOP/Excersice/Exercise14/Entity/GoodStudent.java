@@ -3,13 +3,16 @@ package Exercise14.Entity;
 import java.time.LocalDate;
 
 public class GoodStudent extends Student{
-    private int gpa;
+    private float gpa;
     private String bestRewardName;
 
-    public GoodStudent(String fullName, LocalDate doB, String sex, int phone, String university, String gradeLevel, int gpa, String bestRewardName) {
+    public GoodStudent(String fullName, LocalDate doB, String sex, String phone, String university, String gradeLevel, float gpa, String bestRewardName) {
         super(fullName, doB, sex, phone, university, gradeLevel);
         this.gpa = gpa;
         this.bestRewardName = bestRewardName;
+    }
+
+    public GoodStudent() {
     }
 
     @Override
@@ -20,7 +23,7 @@ public class GoodStudent extends Student{
                 "} " + super.toString();
     }
 
-    public void setGpa(int gpa) {
+    public void setGpa(float gpa) {
         this.gpa = gpa;
     }
 
@@ -28,7 +31,7 @@ public class GoodStudent extends Student{
         this.bestRewardName = bestRewardName;
     }
 
-    public int getGpa() {
+    public float getGpa() {
         return gpa;
     }
 

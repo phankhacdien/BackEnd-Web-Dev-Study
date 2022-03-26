@@ -18,6 +18,10 @@ public class EmployeeManager {
         this.employeeList.add(new_employee);
     }
 
+    public void insert(List<Employee> new_employee) {
+        this.employeeList.addAll(new_employee);
+    }
+
     public void revise(String revise_id) {
         Employee revise_employee = this.employeeList.stream()
                 .filter(employee -> employee.getId().equals(revise_id))

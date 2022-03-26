@@ -45,8 +45,7 @@ set std_name = 'Hai'
 where std_id = 2;
 
 -- Delete
-delete from demo.student 
-where std_id = 5;
+delete from demo.student where std_id = 5;
 
 -- Select
 select * from demo.student;

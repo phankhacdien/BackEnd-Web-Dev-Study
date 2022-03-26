@@ -11,7 +11,6 @@ insert into t1 values
 (100, 'abcde');
 
 select s2 from t1;
-(select s2 from t1);
 
 -- 1. Subquery in where clause
 create table customers(
