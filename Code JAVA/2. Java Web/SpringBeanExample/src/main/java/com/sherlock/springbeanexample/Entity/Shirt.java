@@ -10,7 +10,7 @@ import javax.annotation.PreDestroy;
 //@Component
 @Component("Shirt")
 @Scope("prototype")
-//@Primary
+@Primary
 public class Shirt implements Outfit{
     @PostConstruct
     public void postConstruct() {

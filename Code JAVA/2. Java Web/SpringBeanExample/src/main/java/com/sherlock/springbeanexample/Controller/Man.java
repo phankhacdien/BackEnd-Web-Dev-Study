@@ -13,10 +13,7 @@ public class Man {
 //    @Qualifier("Coat")
     private Outfit outfit;
 
-//    public Man(Outfit outfit) {
-//        this.outfit = outfit;
-//    }
-//    @Autowired
+    @Autowired
     public Man( Outfit outfit) {
         this.outfit = outfit;
     }
@@ -28,8 +25,8 @@ public class Man {
         return outfit;
     }
 
-    @Autowired
-    public void setOutfit(@Qualifier("Shirt") Outfit outfit) {
+//    @Autowired
+    public void setOutfit(/*@Qualifier("Shirt") */Outfit outfit) {
         this.outfit = outfit;
     }
 }
