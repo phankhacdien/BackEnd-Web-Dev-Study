@@ -10,7 +10,9 @@ public class Role {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id")
     private Long id;
+
     private String roleName;
+
     @ManyToMany(mappedBy = "roles", cascade = CascadeType.ALL)
     private Set<AppUser> users = new HashSet<>();
 

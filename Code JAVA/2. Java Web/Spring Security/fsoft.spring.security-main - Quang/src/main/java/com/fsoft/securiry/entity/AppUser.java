@@ -10,9 +10,11 @@ public class AppUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
+
     private String name;
     private String username;
     private String password;
+
     @ManyToMany
     @JoinTable(
             name = "user_role",
