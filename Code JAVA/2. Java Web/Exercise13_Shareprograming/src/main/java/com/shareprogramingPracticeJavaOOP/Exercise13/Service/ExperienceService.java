@@ -1,5 +1,6 @@
 package com.shareprogramingPracticeJavaOOP.Exercise13.Service;
 
+import com.shareprogramingPracticeJavaOOP.Exercise13.Entities.Employee;
 import com.shareprogramingPracticeJavaOOP.Exercise13.Entities.ExperienceEmployee;
 import com.shareprogramingPracticeJavaOOP.Exercise13.Repositories.ExperienceEmployeeRepo;
 import com.shareprogramingPracticeJavaOOP.Exercise13.Service.Interfaces.iExperienceService;
@@ -27,18 +28,18 @@ public class ExperienceService implements iExperienceService {
 
     @Override
     public ResponseEntity<ResponseObject> updateExistedEmployee(ExperienceEmployee updateEmployee) {
-        if(this.experienceEmployeeRepo.findById(updateEmployee.getEmployeeID()).orElse(null) == null) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(
-                    new ResponseObject("Ok",
-                                        "Cannot found employee with ID: " + updateEmployee.getEmployeeID() + " to update new employee will be created!",
-                                        updateEmployee)
-            );
-        } else {
-            return ResponseEntity.status(HttpStatus.OK).body(
-                    new ResponseObject("Ok", "Update employee successfully", ExperienceEmployee updatedEmployee -> {
+        ExperienceEmployee updatedEmployee = this.experienceEmployeeRepo.findById(updateEmployee.getEmployeeID())
+                .map(employee -> {
+                    employee.setEmployeeName(updateEmployee.getEmployeeName());
+                    employee.setEmployeeBirthday(updateEmployee.getEmployeeBirthday());
+                    employee.setEmployeePhone(updateEmployee.getEmployeePhone());
+                    employee.setExperienceYear(updateEmployee.getExperienceYear());
+                    employee.setProSkill(updateEmployee.getProSkill());
+                    return this.experienceEmployeeRepo.save(employee);
+                }).orElse(null);
 
-                    })
-            );
-        }
+        return ResponseEntity.status(HttpStatus.OK).body(
+                new ResponseObject("Ok", "Update employee Successfully!", updateEmployee)
+        );
     }
 }
