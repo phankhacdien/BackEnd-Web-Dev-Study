@@ -1,5 +1,7 @@
 package com.example.security_viblo_nguyenhoangnam.Entities;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -7,6 +9,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.Collections;
 
+@Data
+@AllArgsConstructor
 public class CustomizedUserDetails implements UserDetails {
     private User user;
 
